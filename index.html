@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOHO | عمر - مطور ومؤسس</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, #00f260, #0575e6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .founder {
+            font-size: 1.1rem;
+            color: #00f260;
+        }
+
+        /* Sections */
+        section {
+            background: rgba(255,255,255,0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        h2 {
+            color: #00f260;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #00f260;
+            padding-bottom: 10px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-box {
+            background: rgba(0,242,96,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(0,242,96,0.3);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00f260;
+        }
+
+        .stat-label {
+            color: #aaa;
+            margin-top: 10px;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            background: rgba(255,255,255,0.08);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,242,96,0.2);
+        }
+
+        .project-name {
+            font-size: 1.4rem;
+            color: #0575e6;
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-top: 15px;
+        }
+
+        .status-done {
+            background: #00f260;
+            color: #000;
+        }
+
+        .status-progress {
+            background: #ffa500;
+            color: #000;
+        }
+
+        .status-plan {
+            background: #6c757d;
+            color: #fff;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 12px;
+            text-decoration: none;
+            color: #fff;
+            transition: background 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(0,242,96,0.2);
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #00f260, #0575e6);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-info h3 {
+            color: #00f260;
+            font-size: 1rem;
+        }
+
+        .contact-info p {
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Header -->
+        <header>
+            <div class="logo">NOHO</div>
+            <div class="tagline">منصة المطورين والمبتكرين</div>
+            <div class="founder">المؤسس: عمر (nohojs)</div>
+        </header>
+
+        <!-- About -->
+        <section>
+            <h2>نبذة عني</h2>
+            <p style="font-size: 1.1rem; color: #ccc; line-height: 2;">
+                مطور شاب بعمر 14 سنة، مؤسس شركة NOHO. أقوم ببناء مكتبات ومشاريع مفتوحة المصدر 
+                تخدم المطورين العرب والعالم. هدفي هو تبسيط البرمجة وتوفير أدوات احترافية 
+                لبناء البوتات والتطبيقات بسهولة.
+            </p>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">مكتبة منشأة</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">مشاريع نشطة</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">عاماً من العمر</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section>
+            <h2>مشاريعي</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-name">noho-platform</div>
+                    <div class="project-desc">مكتبة بناء صفحات الويب بسهولة - إطار عمل خفيف وسريع</div>
+                    <span class="status status-done">✓ تم الإنشاء</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">noho_bot</div>
+                    <div class="project-desc">مكتبة شاملة لبناء البوتات - تدعم واتساب، تيليجرام، ديسكورد، وسلاك</div>
+                    <span class="status status-progress">🚧 قيد البناء</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">noho-convert</div>
+                    <div class="project-desc">مكتبة تحويل الملصقات والصور والصيغ المختلفة</div>
+                    <span class="status status-plan">📋 في الخطة</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">noho-search</div>
+                    <div class="project-desc">محرك بحث شامل في جميع المتصفحات والمصادر</div>
+                    <span class="status status-plan">📋 في الخطة</span>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-name">noho-db</div>
+                    <div class="project-desc">مكتبة قواعد البيانات المبسطة للمطورين</div>
+                    <span class="status status-plan">📋 في الخطة</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section>
+            <h2>تواصل معي</h2>
+            <div class="contact-grid">
+                
+                <a href="https://wa.me/201283071338" class="contact-item" target="_blank">
+                    <div class="icon">📱</div>
+                    <div class="contact-info">
+                        <h3>واتساب</h3>
+                        <p>+20 128 307 1338</p>
+                    </div>
+                </a>
+
+                <a href="mailto:animeplay306@gmail.com" class="contact-item">
+                    <div class="icon">📧</div>
+                    <div class="contact-info">
+                        <h3>البريد الإلكتروني</h3>
+                        <p>animeplay306@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/animeplay306-dev" class="contact-item" target="_blank">
+                    <div class="icon">💻</div>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <p>animeplay306-dev</p>
+                    </div>
+                </a>
+
+                <a href="https://www.npmjs.com/~nohojs" class="contact-item" target="_blank">
+                    <div class="icon">📦</div>
+                    <div class="contact-info">
+                        <h3>NPM</h3>
+                        <p>nohojs</p>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 NOHO Company - جميع الحقوق محفوظة</p>
+            <p style="margin-top: 10px; color: #00f260;">صنع بـ ❤️ بواسطة عمر</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
